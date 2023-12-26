@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List With Local Storage</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="new-task">
-        <input type="text" placeholder="Enter The Task Here..." />
-        <button id="push">Add</button>
-      </div>
-      <div id="tasks"></div>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gloock&family=Josefin+Sans:ital,wght@0,400;1,300&family=Libre+Baskerville:ital@0;1&family=Metrophobic&family=Montserrat:ital@1&family=PT+Serif&family=Raleway&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>To Do App</title>
+</head>
+<body>
+    
+        <div class="holder">
+            <div class="title_holder">
+                <h1 class="heading">To Do List  <img src="./imgs/to-do-list-svgrepo-com.png" alt="todo logo"/></h1>
+            </div>
+            <div class="body_holder">
+                <input type="text" name="Task" id="task" placeholder="Enter a new Task">
+                <button id="new-task"><img src="./imgs/plus-circle-svgrepo-com.png" /></button>
+            </div>
+            <div class="list-holder">
+                    <ul class="list">
+
+                    </ul>
+            </div>
+        </div>
     <script src="script.js"></script>
   </body>
 </html>
