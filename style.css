@@ -1,93 +1,159 @@
-* {
-    padding: 0;
-    margin: 0;
+body{
+    color:#f2e9e4;
     box-sizing: border-box;
-  }
-  body {
-    background-color: #0b87ff;
-  }
-  .container {
-    width: 90%;
-    max-width: 34em;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-  }
-  #new-task {
-    position: relative;
-    background-color: #ffffff;
-    padding: 1.8em 1.25em;
-    border-radius: 0.3em;
-    box-shadow: 0 1.25em 1.8em rgba(1, 24, 48, 0.15);
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    gap: 1em;
-  }
-  #new-task input {
-    font-family: "Poppins", sans-serif;
-    font-size: 1em;
-    border: none;
-    border-bottom: 2px solid #d1d3d4;
-    padding: 0.8em 0.5em;
-    color: #111111;
-    font-weight: 500;
-  }
-  #new-task input:focus {
-    outline: none;
-    border-color: #0b87ff;
-  }
-  #new-task button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 1em;
-    background-color: #0b87ff;
-    color: #ffffff;
-    outline: none;
-    border: none;
-    border-radius: 0.3em;
-    cursor: pointer;
-  }
-  #tasks {
-    background-color: #ffffff;
-    position: relative;
-    padding: 1.8em 1.25em;
-    margin-top: 3.8em;
-    width: 100%;
-    box-shadow: 0 1.25em 1.8em rgba(1, 24, 48, 0.15);
-    border-radius: 0.6em;
-  }
-  .task {
-    background-color: #ffffff;
-    padding: 0.3em 0.6em;
-    margin-top: 0.6em;
-    display: flex;
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+    width:100%;
+    background: linear-gradient(310deg,#E39596,#A284BA,#2339A6);
+    /* background: linear-gradient(310deg,#051923,#003554,#006494,#0582ca,#00a6fb,#0582ca,#006494,#003554,#051923); */
+    /* background: linear-gradient(310deg,#66347F,#9E4784,#66347F); */
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite ;
+    min-height: 100vh;
+    padding:20px;
+    display:flex;
     align-items: center;
-    border-bottom: 2px solid #d1d3d4;
-    cursor: pointer;
-  }
-  .task span {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.9em;
-    font-weight: 400;
-  }
-  .task button {
-    color: #ffffff;
-    padding: 0.8em 0;
-    width: 2.8em;
-    border-radius: 0.3em;
+    justify-content: center;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+input[type=text]{
+    flex:1;
+    color:#f2e9e4;
+    background: transparent;
     border: none;
-    outline: none;
-    cursor: pointer;
-  }
-  .delete {
-    background-color: #fb3b3b;
-  }
-  .edit {
-    background-color: #0b87ff;
-    margin-left: auto;
-    margin-right: 3em;
-  }
-  .completed {
+    outline:none;
+    border-radius:20px;
+}
+
+.heading>img{
+    height:28px;
+    
+}
+.holder{
+    max-width: 70%;
+    min-width: 70%;
+    background-color: #f2e9e4;
+    color:#22223b;
+    border-radius:30px;
+    padding-bottom: 3%;
+}
+
+li>img{
+    height:28px;
+    width:28px;
+    position: absolute;
+    left:70%;
+}
+
+
+.title_holder{
+    text-align: center;
+    padding :5px;
+    border-bottom: 1px solid  black;
+}
+::placeholder{
+    color:#f2e9e4;
+    opacity:1;
+}
+.body_holder{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #4a4e69;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left:20px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    margin-top:2%;
+}
+.list-holder{
+    border-radius: 10px;
+    background-color: #f2e9e4;
+    color:#22223b;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:0% 5% 5% 5%;
+    border-radius: 30px;
+
+}
+.list{
+    padding:12px 8px 12px 50px;
+    font-size:17px;
+    user-select: none;
+    cursor:pointer;
+    list-style:none;
+}
+ul > li::before{
+    content:" ";
+    height:28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    right:8px;
+    background-color: rgb(192, 192, 192);
+}
+ul > li.checked{
+    color:#555;
     text-decoration: line-through;
-  }
+
+}
+ul > li.checked::before{
+    background-image: url(./imgs/12-months-blue-check-mark-icon-11563057671d6e51m4dr7.png);
+}
+li{
+    padding:15px 5px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    align-items: flex-start;
+}
+#new-task{
+    padding:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    color:#f2e9e4;
+    font-family: 'Raleway', sans-serif;
+    background-color: #22223b;
+    font-size: 1.5em;
+    font-weight:500 ;
+    border:1px solid black;
+    font-family:  'Libre Baskerville', serif;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:10px;
+    width:fit-content;
+    margin-bottom: 1px;
+}
+#new-task{
+    border:none;
+    outline: none;
+    cursor:pointer;
+}
+#new-task>img{
+    height:30px;
+    color:#f2e9e4;
+    background-color: #FFFBF5;
+    border-radius: 50%;
+    border:1px solid;
+    outline: none;
+}
+
+
